@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Spam Click Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload();"></script>
+
+</head>
+<body>
+    <div id="banner">
+        <img src="fond.jpg.avif" alt="Logo">
+    </div>
+    <div id="game-container">
+        <div id="background"></div>
+        <div id="player-container" onclick="drinkButton.click()">
+            <img src="Images/Player.png" alt="Character" id="game-character">
+        </div>
+        <div id="glass-animation"></div>
+        <div id="drink-button">Boire un shot!</div>
+        <div id="timer">Temps restant : <span id="time-left">5</span> secondes</div>
+        <div id="score">Shots bus : <span id="shots-taken">0</span></div>
+    </div>
+
+    <div id="result-popup" class="hidden">
+    <div id="result-text">Score final : <span id="final-score">0</span></div>
+    <input type="text" id="player-name-input" placeholder="Entrez votre nom">
+    <button id="retry-button">Reessayer</button>
+    <button id="send-score-button">Envoyer le résultat</button>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

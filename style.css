@@ -1,0 +1,120 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#banner {
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#banner img {
+    max-width: 100%;
+}
+
+#game-container {
+    background-color: #F0ECE5;
+    padding: 100px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    margin: 50px 50px;
+    text-align: center;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/fond.jpg.avif'); /* Remplacer par ton image de fond */
+    background-size: cover;
+    z-index: -1;
+}
+
+#game-character {
+    position: center;
+    z-index: 1;
+    height: 300px;
+}
+
+#glass-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; /* Ajuste la taille selon tes besoins */
+    height: 100px; /* Ajuste la taille selon tes besoins */
+    background-image: url('images/verre.png'); /* Remplacer par ton image du verre */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0; /* Initial opacity set to 0 */
+}
+
+#drink-button {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#result-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+#retry-button {
+    margin-top: 10px;
+}
+
+/* Animation du verre */
+.animate-glass {
+    animation: moveGlass 0.5s forwards;
+}
+
+@keyframes moveGlass {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+#player-container {
+    cursor: pointer; /* Ajouter un curseur pointer pour indiquer qu'il est cliquable */
+}
+
+
+
+
+/* pour les formats d'utilisation différents*/
+/* Styles spécifiques pour les appareils mobiles */
+@media only screen and (max-width: 768px) {
+    /* Ajoutez vos styles spécifiques pour les appareils mobiles ici */
+}
+
+/* Styles spécifiques pour les tablettes */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Ajoutez vos styles spécifiques pour les tablettes ici */
+}
+
+/* Styles spécifiques pour les ordinateurs de bureau */
+@media only screen and (min-width: 1024px) {
+    /* Ajoutez vos styles spécifiques pour les ordinateurs de bureau ici */
+}
